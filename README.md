@@ -125,4 +125,4 @@ This project is private and proprietary.
 
 ## Support
 
-For support, email support@personance.com or contact our team.
+For support, email anthonylee.am@gmail.com or contact our team.
