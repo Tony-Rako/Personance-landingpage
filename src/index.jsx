@@ -12,6 +12,7 @@ import {
   Target,
   ArrowRight 
 } from "lucide-react";
+import { APP_CONFIG } from './constants/config.js';
 
 const features = [
   {
@@ -54,7 +55,7 @@ function HomePage() {
               </div>
               <span className="text-xl font-bold text-gray-900">Personance</span>
             </div>
-            <Button>Sign In</Button>
+            <Button as="a" href={APP_CONFIG.APP_URL}>Sign In</Button>
           </div>
         </div>
       </nav>
@@ -72,7 +73,7 @@ function HomePage() {
           Track expenses, build budgets, monitor investments, and achieve your financial goals.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+          <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700" as="a" href={APP_CONFIG.APP_URL}>
             Get Started Free
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
@@ -119,7 +120,7 @@ function HomePage() {
           <p className="text-xl mb-8 opacity-90">
             Join thousands of users who have taken control of their financial future with Personance.
           </p>
-          <Button size="lg" variant="secondary">
+          <Button size="lg" variant="secondary" as="a" href={APP_CONFIG.APP_URL}>
             Start Your Financial Journey
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

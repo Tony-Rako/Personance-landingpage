@@ -2,6 +2,7 @@ import React from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button.jsx";
 import PropTypes from "prop-types";
+import { APP_CONFIG } from "../constants/config.js";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -37,7 +38,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button>Get Started</Button>
+            <Button as="a" href={APP_CONFIG.APP_URL}>Get Started</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -66,7 +67,7 @@ const Header = () => {
                 Contact
               </a>
               <div className="pt-2">
-                <Button className="w-full">Get Started</Button>
+                <Button className="w-full" as="a" href={APP_CONFIG.APP_URL}>Get Started</Button>
               </div>
             </div>
           </div>

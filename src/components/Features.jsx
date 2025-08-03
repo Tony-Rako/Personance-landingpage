@@ -8,6 +8,7 @@ import {
   TrendingUp 
 } from "lucide-react";
 import PropTypes from "prop-types";
+import { APP_CONFIG } from "../constants/config.js";
 
 const Features = () => {
   const features = [
@@ -82,9 +83,12 @@ const Features = () => {
             <p className="text-gray-600 mb-6">
               Join thousands of users who have already taken control of their finances with Personance.
             </p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+            <a 
+              href={APP_CONFIG.APP_URL}
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors inline-block"
+            >
               Get Started Today
-            </button>
+            </a>
           </div>
         </div>
       </div>

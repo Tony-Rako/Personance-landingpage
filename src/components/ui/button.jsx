@@ -30,15 +30,15 @@ const buttonVariants = cva(
   }
 );
 
-const Button = React.forwardRef(({ className, variant, size, children, ...props }, ref) => {
+const Button = React.forwardRef(({ className, variant, size, as: Component = 'button', children, ...props }, ref) => {
   return (
-    <button
+    <Component
       className={cn(buttonVariants({ variant, size, className }))}
       ref={ref}
       {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 });
 
@@ -47,6 +47,7 @@ Button.propTypes = {
   className: PropTypes.string,
   variant: PropTypes.oneOf(['default', 'destructive', 'outline', 'secondary', 'ghost', 'link']),
   size: PropTypes.oneOf(['default', 'sm', 'lg', 'icon']),
+  as: PropTypes.string,
   children: PropTypes.node,
 };
 

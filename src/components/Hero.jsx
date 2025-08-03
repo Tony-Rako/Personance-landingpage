@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "./ui/button.jsx";
 import PropTypes from "prop-types";
+import { APP_CONFIG } from "../constants/config.js";
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
             Personance helps you track expenses, create budgets, and achieve your financial goals with intelligent insights and easy-to-use tools.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button className="text-lg px-8 py-3">
+            <Button className="text-lg px-8 py-3" as="a" href={APP_CONFIG.APP_URL}>
               Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
